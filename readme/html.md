@@ -10,3 +10,7 @@
 
 <ol type="1" "A" "a" "I" "i">
 <ul style="list-style-type:disc;square;circle;none">
+
+_________________
+1vh - единица, равная 1/100-ой высоты viewport;
+1vw - единица, равная 1/100-ой ширины viewport.
