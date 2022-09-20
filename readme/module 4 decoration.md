@@ -43,6 +43,7 @@ _______________________________
 .list-link::before,
 .list-link::after {
   content: "";
+  display: block;
   width: 24px;
   height: 24px;
   background-size: contain;
