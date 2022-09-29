@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
-</head>
-<body> 
- 
-</body>
+  </head>
+  <body>
+    <form class="form js-speaker-form">
+        <label class="form-field">   
+            <span class="icon"></span>
+            <input
+              type="text"
+              name="name"              
+              class="form-input"
+              placeholder=" "
+              autocomplete="off"
+            />
+            <span class="form-label">Name</span>
+        </label>
+     
+      
+      <div class="form-field">
+        <label for="mail" class="form-label">Email</label>
+        <span class="icon"></span>
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          class="form-input"
+          placeholder=" "
+        />
+       
+      </div>
+    </form>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+  </body>
 </html>
