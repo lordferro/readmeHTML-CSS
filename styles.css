@@ -1,52 +1,57 @@
-.form {
-    padding: 20px;
-    margin: 20px;
-    width: 400px;
+ul {
+    list-style: none;
 }
 
-.form-field {
-    position: relative;
-    margin-bottom: 20px;
+li {
+    margin-bottom: 10px;
 }
 
-.form-input {
-    width: 100%;
-    margin: 0;
-    padding: 10px 20px;
-    padding-left: 40px;
+.label {
+  
+    display: flex;
+    align-items: center;
+
+
 }
 
-.form-label {
+.checkbox {
+    /* appearance: none;
     position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
 
-    transition: transform 250ms linear;
-
+    top: 0;
+    left: 0; */
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  
 }
 
 .icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    background-color: tomato;
-    width: 20px;
-    height: 20px;
     display: inline-block;
-    transform: translateY(-50%);
-    transition: transform 250ms linear;
-}
-
-.form-field:focus-within .icon {
+    width: 16px;
+    height: 15px;
     background-color: red;
+
+    border: 1px solid red;
+    border-radius: 4px;
+
+    margin-right: 10px;
+
+    cursor: pointer;
+    
 }
 
-.form-field:focus-within .form-label {
-    transform: translateY(-50px);
+.checkbox:checked + .icon {
+    border-color: blue;
+    background-image: url(./icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
 }
-
-.form-input:not(:placeholder-shown) + .form-label {
-    transform: translateY(-50px);
-}
-
