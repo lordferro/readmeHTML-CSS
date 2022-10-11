@@ -4,50 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+   <link rel="stylesheet" href="./css/main.min.css">
     <title>Document</title>
   </head>
   <body>
-    <form class="form js-speaker-form">
-      <ul>
-        <li>
-          <label class="label"
-            ><input type="checkbox" name="topic" class="checkbox" />
-            <span class="icon"></span>
-            html</label
-          >
-        </li>
-        <li>
-          <label class="label"
-            ><input type="checkbox" name="topic" class="checkbox" />
-            <span class="icon"></span>
-            css</label
-          >
-        </li>
-        <li>
-          <label class="label"
-            ><input type="checkbox" name="topic" class="checkbox" />
-            <span class="icon"></span>
-            js</label
-          >
-        </li>
-      </ul>
-    </form>
 
-    <script>
-      (() => {
-        document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
   </body>
 </html>
