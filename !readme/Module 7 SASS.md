@@ -1,61 +1,5 @@
 Синтаксис объявления переменной - знак $ перед именем и её значение после двоеточия.
 
-________________________
-main.scss
-$primaryColor: red;
-
-body {
-  $primaryColor: blue;
-  // Это совсем другая переменная хоть и с таким же именем,
-  // и доступна она только внутри body.
-  background: $primaryColor;
-}
-
-p {
-  color: $primaryColor;
-  // Цвет текста параграфа будет красный,
-  // используется глоабльная переменная со значением red.
-}
-________________________
-.section {
-  width: 100%;
-
-  .title {
-    color: red;
-  }
-
-  .text {
-    font-size: 14px;
-  }
-}
-________________________
-Символ & (амперсанд) позволяет указать в какое место необходимо подставить родительский селектор. 
-.section {
-  width: 100%;
-
-  &__title {
-    color: red;
-  }
-
-  &__text {
-    font-size: 14px;
-  }
-}
-
-=========== 
-
-main.css
-.section {
-  width: 100%;
-}
-
-.section__title {
-  color: red;
-}
-
-.section__text {
-  font-size: 14px;
-}
 
 ________________________
 width: 960px + 10%; // Ошибка!
@@ -98,3 +42,28 @@ _____________________________
 
 @import сначала файл с переменными, что б они были досупны в следующих 
 _______________________
+
+@mixin bordered($color: black, $type) { <!--  цвет по умолчаию юует чёрный -->
+  border-top: 1px $type $color;
+  border-bottom: 1px $type $color;
+}
+
+<!-- вызывать мексина параметры в порядке указаном в миксине -->
+@include bordered(red, dashed)
+<!-- если надо в другом порядке -->
+@include bordered ($type: dashed)
+
+_____________________________________
+$social-icons: 'facebook', 'twitter';
+$client-icons: 'client1', 'client2'; <!-- Создаём списки -->
+
+@mixin iconGenerator ($iconList) { <!-- создаём миксин -->
+  @each $iconName in $iconList { 
+    .icon-#{$iconName} {
+      background-image: url("../images/#{iconName}.svg")
+    }
+  }
+}
+
+@include iconGenerator($social-icons);
+______________________
