@@ -1,1 +1,1 @@
-.section{color:red}.section .title{background-color:#fff}/*# sourceMappingURL=main.min.css.map */
+.box{width:320px;height:240px;background-image:url("https://picsum.photos/id/237/320/240");background-size:320px 240px}@media screen and (min-device-pixel-ratio: 4),screen and (-webkit-min-device-pixel-ratio: 4.166666666666667),screen and (min-resolution: 400dpi),screen and (-webkit-min-device-pixel-ratio: 4),screen and (min-resolution: 4dppx){.box{background-image:url("https://picsum.photos/id/237/640/480")}}/*# sourceMappingURL=main.min.css.map */

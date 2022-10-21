@@ -1,9 +1,16 @@
-$color: green;
+/* 1x screens, default value, 320x240 image */
+.box {
+  width: 320px;
+  height: 240px;
+  background-image: url("https://picsum.photos/id/237/320/240");
+  background-size: 320px 240px;
+}
 
-.section {
-    color: red;
-
-    .title {
-        background-color: #fff;
-    }
+/* 2x screens, retina, 640x480 image */
+@media screen and (min-device-pixel-ratio: 4),
+  screen and (min-resolution: 400dpi),
+  screen and (min-resolution:4dppx) {
+  .box {
+    background-image: url("https://picsum.photos/id/237/640/480");
+  }
 }
