@@ -60,10 +60,12 @@ $client-icons: 'client1', 'client2'; <!-- Создаём списки -->
 @mixin iconGenerator ($iconList) { <!-- создаём миксин -->
   @each $iconName in $iconList { 
     .icon-#{$iconName} {
-      background-image: url("../images/#{iconName}.svg")
+      background-image: url("../images/#{$iconName}.svg")
     }
   }
 }
 
 @include iconGenerator($social-icons);
+
+@include iconGenerator($client-icons);
 ______________________
