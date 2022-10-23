@@ -66,4 +66,17 @@ dppx (dots per pixel) - количество физических пикселе
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {}
   _____________________________
+  <!--гибридная вёрстка - на мобильнике отзывчивая (так как разные экраны мобильных), а потом адаптивная. Тянись как хочешь, но когда вьюпорт от 480 пикселей - то останься шириной 480 пикселей.-->
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min width: 768px) {
+    width: 768px;
+  }
+  
+  @media screen and (min width: 1200px) {
+    width: 1200px;
+  }
+  _________________________________________
   

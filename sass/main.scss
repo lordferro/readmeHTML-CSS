@@ -1,16 +1,21 @@
-/* 1x screens, default value, 320x240 image */
-.box {
-  width: 320px;
-  height: 240px;
-  background-image: url("https://picsum.photos/id/237/320/240");
-  background-size: 320px 240px;
-}
 
-/* 2x screens, retina, 640x480 image */
-@media screen and (min-device-pixel-ratio: 4),
-  screen and (min-resolution: 400dpi),
-  screen and (min-resolution:4dppx) {
-  .box {
-    background-image: url("https://picsum.photos/id/237/640/480");
+    @mixin colorize($colors,$baseSelector) {
+      @each $color in $colors {
+      $idx: index($colors, $color);      
+    
+      #{$baseSelector}:nth-child(#{$idx}) {
+        background-color: #{$color};
+      }
+    }
+    }
+  .features-item {
+    min-width: 320px;
+    max-width: 1200px;
+    border: 1px solid black;
+
+
+
   }
-}
+  $colors: "#F44336", "#3F51B5", "#4CAF50", "#00BCD4", "#E91E63", "#009688";
+
+  @include colorize($colors, ".features-item");
