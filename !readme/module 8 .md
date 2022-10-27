@@ -79,4 +79,11 @@ dppx (dots per pixel) - количество физических пикселе
     width: 1200px;
   }
   _________________________________________
-  
+  <!-- aria для читалок -->
+ nav > logo + (button (aria-expanded="false" <!-- меню закрыто (тоесть не открыто) --> aria-controls="manu-container" <!-- меню связано по id-->)  > svg (aria-label="переключатель мобильного меню) > use-cross use-menu) 
+     > div.menu-container (id="menu-container" <!-- меню связано по id-->) 
+
+ .icon-cross { display:none; }
+
+ 
+
