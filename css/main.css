@@ -1,31 +1,9 @@
-.features-item {
-  min-width: 320px;
-  max-width: 1200px;
-  border: 1px solid black;
-  text-align: center;
-  list-style: none;
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
-.features-item:nth-child(1) {
-  background-color: #F44336;
-}
-
-.features-item:nth-child(2) {
-  background-color: #3F51B5;
-}
-
-.features-item:nth-child(3) {
-  background-color: #4CAF50;
-}
-
-.features-item:nth-child(4) {
-  background-color: #00BCD4;
-}
-
-.features-item:nth-child(5) {
-  background-color: #E91E63;
-}
-
-.features-item:nth-child(6) {
-  background-color: #009688;
+.thumb {
+  outline: 3px solid red;
 }/*# sourceMappingURL=main.css.map */
