@@ -115,6 +115,8 @@ dppx (dots per pixel) - количество физических пикселе
     background-image: url('photo@3x.png');
   }
 }
+
+<!-- если фоновое изображение разно для разных устройств то @media (min-width: tablet/desktop) { тут все плотности экранов x1, x2.x3} -->
 _____________________________
   <!--гибридная вёрстка - на мобильнике отзывчивая (так как разные экраны мобильных), а потом адаптивная. Тянись как хочешь, но когда вьюпорт от 480 пикселей - то останься шириной 480 пикселей.-->
   @media screen and (min-width: 480px) {
@@ -135,9 +137,20 @@ _____________________________
 <picture>
   <source srcset="photo.webp 1x, photo@2x.webp 2x" type="image/webp" />
   <source srcset="photo.jpg 1x, photo@2x.jpg 2x" type="image/jpeg" />
-  <img src="photo.jpg" alt="Кот" />
+  <img
+        srcset="./img.jpg 354w, ./img@2x.jpg 708w, ./img@3x.jpg 1062w"
+        src="./img.jpg"
+        alt="pc"
+       sizes="(min-width: 800px) 33vw, (min-width: 500px) 50vw, 100vw"/>
 </picture>
+_________________________________
+ <!-- Кадрирование (art direction) -->
 
+ <!-- Для экранов шире 600px будет загружен photo-wide.jpg -->
+<picture>
+  <source srcset="photo-wide.jpg" media="(min-width: 600px)" />
+  <img src="photo.jpg" alt="Фотография" />
+</picture>
   _________________________________________
   <!-- aria для читалок -->
  nav > logo + (button (aria-expanded="false" <!-- меню закрыто (тоесть не открыто) --> aria-controls="manu-container" <!-- меню связано по id-->)  > svg (aria-label="переключатель мобильного меню) > use-cross use-menu) 
