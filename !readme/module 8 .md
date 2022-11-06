@@ -71,6 +71,26 @@ ___________________________________________________
        sizes="(min-width: 800px) 33vw, (min-width: 500px) 50vw, 100vw"/>     <!--указываем размер холста на котором будет картинка в порядке убывания, т к браузер берет первое подходящее и не проверяет дальше.  -->
     </div>
 _____________________________________
+<!-- Следующий пример определяет элемент <picture>, который позволит браузерам загрузить photo.webp, при этом предоставляется альтернатива photo.jpg для браузеров которые еще не поддерживают webp. -->
+
+<picture>
+  <source srcset="photo.webp 1x, photo@2x.webp 2x" type="image/webp" />
+  <source srcset="photo.jpg 1x, photo@2x.jpg 2x" type="image/jpeg" />
+  <img
+        srcset="./img.jpg 354w, ./img@2x.jpg 708w, ./img@3x.jpg 1062w"
+        src="./img.jpg"
+        alt="pc"
+       sizes="(min-width: 800px) 33vw, (min-width: 500px) 50vw, 100vw"/>
+</picture>
+_________________________________
+ <!-- Кадрирование (art direction) -->
+
+ <!-- Для экранов шире 600px будет загружен photo-wide.jpg -->
+<picture>
+  <source srcset="photo-wide.jpg 1x, photo-wide@2x.jpg 2x" media="(min-width: 600px)" />
+  <img src="photo.jpg" alt="Фотография" />
+</picture>
+  _________________________________________
 
 <!-- для фоновых изображений -->
 
@@ -132,26 +152,7 @@ _____________________________
   }
   _________________________________________
 
-<!-- Следующий пример определяет элемент <picture>, который позволит браузерам загрузить photo.webp, при этом предоставляется альтернатива photo.jpg для браузеров которые еще не поддерживают webp. -->
 
-<picture>
-  <source srcset="photo.webp 1x, photo@2x.webp 2x" type="image/webp" />
-  <source srcset="photo.jpg 1x, photo@2x.jpg 2x" type="image/jpeg" />
-  <img
-        srcset="./img.jpg 354w, ./img@2x.jpg 708w, ./img@3x.jpg 1062w"
-        src="./img.jpg"
-        alt="pc"
-       sizes="(min-width: 800px) 33vw, (min-width: 500px) 50vw, 100vw"/>
-</picture>
-_________________________________
- <!-- Кадрирование (art direction) -->
-
- <!-- Для экранов шире 600px будет загружен photo-wide.jpg -->
-<picture>
-  <source srcset="photo-wide.jpg" media="(min-width: 600px)" />
-  <img src="photo.jpg" alt="Фотография" />
-</picture>
-  _________________________________________
   <!-- aria для читалок -->
  nav > logo + (button (aria-expanded="false" <!-- меню закрыто (тоесть не открыто) --> aria-controls="manu-container" <!-- меню связано по id-->)  > svg (aria-label="переключатель мобильного меню) > use-cross use-menu) 
      > div.menu-container (id="menu-container" <!-- меню связано по id-->) 
