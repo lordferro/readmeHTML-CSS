@@ -1,0 +1,48 @@
+{
+	"folders": [
+		{
+			"name": "lordferro",
+			"path": ".."
+		},
+		{
+			"name": "html-css-22",
+			"path": "../../html-css-22"
+		},
+		{
+			"name": "goit-markup-hw-01",
+			"path": "../../goit-markup-hw-01"
+		},
+		{
+			"name": "goit-markup-hw-02",
+			"path": "../../goit-markup-hw-02"
+		},
+		{
+			"name": "goit-markup-hw-03",
+			"path": "../../goit-markup-hw-03"
+		},
+		{
+			"name": "goit-markup-hw-04",
+			"path": "../../goit-markup-hw-04"
+		},
+		{
+			"name": "goit-markup-hw-05",
+			"path": "../../goit-markup-hw-05"
+		},
+		{
+			"name": "goit-markup-hw-06",
+			"path": "../../goit-markup-hw-06"
+		},
+		{
+			"name": "goit-markup-hw-07",
+			"path": "../../goit-markup-hw-07"
+		},
+		{
+			"name": "goit-markup-hw-08",
+			"path": "../../goit-markup-hw-08"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "goit-markup-hw-08",
+		"svg.preview.background": "dark-transparent"
+	}
+}
